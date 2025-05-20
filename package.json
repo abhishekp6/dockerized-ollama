@@ -1,0 +1,15 @@
+{
+  "name": "ollama-secure",
+  "version": "1.0.0",
+  "description": "Dockerised Ollama with CodeLlama model",
+  "main": "index.js",
+  "scripts": {
+    "docker:build": "docker build -t ollama-secure:latest .",
+    "docker:run": "docker run -d --name ollama-secure-container --security-opt=no-new-privileges --cap-drop=ALL --cap-add=NET_BIND_SERVICE -p 11434:11434 ollama-secure:latest",
+    "docker:stop": "docker stop ollama-secure-container && docker rm ollama-secure-container",
+    "docker:logs": "docker logs -f ollama-secure-container",
+    "docker:clean": "docker system prune -f --volumes"
+  },
+  "author": "Abhishek Pandey",
+  "license": "ISC"
+}

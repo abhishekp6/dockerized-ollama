@@ -1,0 +1,30 @@
+# Version control
+.git
+.gitignore
+
+# Ollama specific
+*.bin
+*.gguf
+*.ggml
+models/
+tmp/
+cache/
+
+# Environment and config
+.env
+.env.*
+config.json
+ollama.json
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*~ 
