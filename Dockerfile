@@ -25,7 +25,11 @@ RUN useradd -m -s /bin/bash ollama
 
 # Create directory for Ollama data with proper permissions
 RUN mkdir -p /home/ollama/.ollama && \
-    chown -R ollama:ollama /home/ollama/.ollama
+    chown -R ollama:ollama /home/ollama/.ollama && \
+    chmod 700 /home/ollama/.ollama
+
+# Define the volume after setting permissions
+VOLUME ["/home/ollama/.ollama"]
 
 # Switch to non-root user
 USER ollama
