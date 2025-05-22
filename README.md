@@ -1,4 +1,4 @@
-# Ollama Secure
+# Lightweight, Controlled Environment for Running Ollama
 
 A Docker-powered way to run [Ollama](https://ollama.ai)! This project provides a secure, containerized environment for running Ollama with proper resource management and model persistence.
 
